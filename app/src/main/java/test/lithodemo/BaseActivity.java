@@ -72,7 +72,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_litho) {
-            finishAndStartActivity(LithoActivity.class);
+            finishAndStartActivity(SimpleLithoActivity.class);
         } else if (id == R.id.nav_regular) {
             finishAndStartActivity(RegularActivity.class);
         } else if (id == R.id.nav_share) {

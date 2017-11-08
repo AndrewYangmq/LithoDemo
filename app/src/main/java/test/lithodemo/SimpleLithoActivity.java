@@ -19,16 +19,16 @@ import com.facebook.yoga.YogaEdge;
 import java.util.Arrays;
 import java.util.List;
 
-public class LithoActivity extends BaseActivity {
+public class SimpleLithoActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ComponentContext componentContext = new ComponentContext(this);
-        createTestViews(conetentViewGroup, componentContext);
+        createTestViews(componentContext);
     }
 
-    private void createTestViews(ViewGroup viewGroup, final ComponentContext componentContext){
+    private void createTestViews(final ComponentContext componentContext){
         final Component component = Text.create(componentContext)
                 .text("Hello World")
                 .textSizeDip(50)
@@ -38,7 +38,7 @@ public class LithoActivity extends BaseActivity {
                 .build();
         for (int i = 0; i < 10; i++) {
             LithoView lithoView = LithoView.create(this, component);
-            viewGroup.addView(lithoView);
+            conetentViewGroup.addView(lithoView);
         }
     }
 }

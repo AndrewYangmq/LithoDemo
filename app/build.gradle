@@ -28,11 +28,18 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
     testCompile 'junit:junit:4.12'
     // Litho
-    apply plugin: 'codenarc'
-    compile 'com.facebook.litho:litho-core:0.7.1'
-    compile 'com.facebook.litho:litho-widget:0.7.1'
-    provided 'com.facebook.litho:litho-annotations:0.7.1'
-    annotationProcessor 'com.facebook.litho:litho-processor:0.7.1'
+    implementation  "com.facebook.litho:litho-core:$rootProject.ext.lithoVersion"
+    implementation  "com.facebook.litho:litho-widget:$rootProject.ext.lithoVersion"
+    compileOnly  "com.facebook.litho:litho-annotations:$rootProject.ext.lithoVersion"
+
+    // Sections
+    implementation "com.facebook.litho:litho-sections-core:$rootProject.ext.lithoVersion"
+    implementation "com.facebook.litho:litho-sections-widget:$rootProject.ext.lithoVersion"
+    compileOnly "com.facebook.litho:litho-sections-annotations:$rootProject.ext.lithoVersion"
+
+    annotationProcessor "com.facebook.litho:litho-processor:$rootProject.ext.lithoVersion"
     // SoLoader
     compile 'com.facebook.soloader:soloader:0.2.0'
+
+    compile 'com.facebook.stetho:stetho:1.5.0'
 }
